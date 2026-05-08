@@ -1,4 +1,4 @@
-package com.sterling.portfolio;
+package com.qintar.portfolio;
 
 import com.getcapacitor.BridgeActivity;
 

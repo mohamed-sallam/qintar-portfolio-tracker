@@ -89,7 +89,7 @@ export function DashboardScreen() {
   };
 
   return (
-    <div className="p-6 max-w-xl mx-auto space-y-8 pb-safe">
+    <div className="p-4 sm:p-6 max-w-xl mx-auto space-y-6 sm:space-y-8 pb-4">
       <div>
          <span className="text-[10px] uppercase tracking-[0.4em] text-text-muted block mb-2">{meta.brandName}</span>
          <h1 className={`text-4xl ${headingCls}`}>
@@ -172,9 +172,9 @@ export function DashboardScreen() {
 
 function Tile({ title, value, headingCls }: { title: string, value: string, headingCls: string }) {
   return (
-    <div className="bg-surface-card th-border border-border-subtle p-6 flex flex-col justify-center th-card th-shadow theme-transition">
-      <span className="text-[9px] uppercase tracking-[0.3em] text-text-muted mb-3">{title}</span>
-      <span className={`${headingCls} text-2xl not-italic`}>{value}</span>
+    <div className="bg-surface-card th-border border-border-subtle p-4 sm:p-5 flex flex-col justify-center th-card th-shadow theme-transition overflow-hidden min-w-0">
+      <span className="text-[9px] uppercase tracking-[0.2em] text-text-muted mb-2 truncate">{title}</span>
+      <span className={`${headingCls} text-lg sm:text-xl not-italic truncate`} title={value}>{value}</span>
     </div>
   );
 }

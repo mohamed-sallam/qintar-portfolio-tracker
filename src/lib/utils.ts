@@ -52,5 +52,3 @@ export async function universalFetch(url: string, options?: RequestInit) {
     };
   }
 }
-
-}

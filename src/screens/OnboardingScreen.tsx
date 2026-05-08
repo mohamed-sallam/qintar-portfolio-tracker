@@ -15,8 +15,8 @@ export function OnboardingScreen() {
     try {
       await db.appSettings.put({ key: 'preferred_currency', value: currency });
       await db.pluginRepos.put({ 
-        url: window.location.origin + '/api/plugins/repo.json', 
-        name: 'Starter Plugins Repo',
+        url: 'https://mohamed-sallam.github.io/qintar-plugins/repo.json', 
+        name: 'Qintar Official Plugins',
         lastFetched: Date.now()
       });
       await db.appSettings.put({ key: 'onboarding_done', value: 'true' });
