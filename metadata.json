@@ -1,0 +1,6 @@
+{
+  "name": "Asset Portfolio Tracker",
+  "description": "Local-first asset portfolio tracker supporting a Plugin-as-a-Service architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

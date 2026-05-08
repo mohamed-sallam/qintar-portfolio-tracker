@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  /* Map CSS variables to Tailwind color tokens */
+  --color-surface-base: var(--th-surface-base);
+  --color-surface-card: var(--th-surface-card);
+  --color-surface-elevated: var(--th-surface-elevated);
+  --color-text-primary: var(--th-text-primary);
+  --color-text-muted: var(--th-text-muted);
+  --color-accent: var(--th-accent);
+  --color-accent-hover: var(--th-accent-hover);
+  --color-border-subtle: var(--th-border-subtle);
+  --color-border-muted: var(--th-border-muted);
+  --color-positive: var(--th-positive);
+  --color-negative: var(--th-negative);
+  --color-btn-bg: var(--th-btn-bg);
+  --color-btn-text: var(--th-btn-text);
+  --color-nav-bg: var(--th-nav-bg);
+  --color-input-bg: var(--th-input-bg);
+  --color-overlay: var(--th-overlay);
+  --color-toggle-on: var(--th-toggle-on);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   THEME: Arctic (DEFAULT) — Light, clean, modern SaaS.
+   Typography: Sans-serif bold, rounded corners, soft shadows.
+   ═══════════════════════════════════════════════════════════════ */
+:root,
+[data-theme="arctic"] {
+  --th-surface-base: #F4F6F9;
+  --th-surface-card: #FFFFFF;
+  --th-surface-elevated: #EDF0F5;
+  --th-text-primary: #1A2332;
+  --th-text-muted: rgba(26, 35, 50, 0.45);
+  --th-accent: #3B82F6;
+  --th-accent-hover: #2563EB;
+  --th-border-subtle: rgba(26, 35, 50, 0.06);
+  --th-border-muted: rgba(26, 35, 50, 0.1);
+  --th-positive: #10B981;
+  --th-negative: #EF4444;
+  --th-btn-bg: #3B82F6;
+  --th-btn-text: #FFFFFF;
+  --th-nav-bg: rgba(255, 255, 255, 0.95);
+  --th-input-bg: #EDF0F5;
+  --th-overlay: rgba(26, 35, 50, 0.5);
+  --th-toggle-on: #3B82F6;
+
+  --th-chart-1: #3B82F6;
+  --th-chart-2: #60A5FA;
+  --th-chart-3: #93C5FD;
+  --th-chart-4: #1E3A5F;
+  --th-chart-5: #BFDBFE;
+
+  --th-radius-card: 16px;
+  --th-radius-btn: 12px;
+  --th-radius-input: 12px;
+  --th-radius-nav: 24px;
+  --th-radius-pill: 999px;
+  --th-shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06);
+  --th-border-w: 0px;
+  --th-nav-border-w: 0px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   THEME: Obsidian — Dark luxury, gold accents, sharp edges
+   Typography: Serif italic headings, thin borders, no rounding
+   ═══════════════════════════════════════════════════════════════ */
+[data-theme="obsidian"] {
+  --th-surface-base: #0A0A0B;
+  --th-surface-card: #161618;
+  --th-surface-elevated: #1C1C1E;
+  --th-text-primary: #E0E0E0;
+  --th-text-muted: rgba(255, 255, 255, 0.4);
+  --th-accent: #C5A059;
+  --th-accent-hover: #D4B06A;
+  --th-border-subtle: rgba(255, 255, 255, 0.05);
+  --th-border-muted: rgba(255, 255, 255, 0.1);
+  --th-positive: #C5A059;
+  --th-negative: rgba(255, 255, 255, 0.6);
+  --th-btn-bg: #FFFFFF;
+  --th-btn-text: #000000;
+  --th-nav-bg: rgba(10, 10, 11, 0.9);
+  --th-input-bg: #1C1C1E;
+  --th-overlay: rgba(0, 0, 0, 0.8);
+  --th-toggle-on: #C5A059;
+
+  --th-chart-1: #C5A059;
+  --th-chart-2: #D1BFAE;
+  --th-chart-3: #8B7A5E;
+  --th-chart-4: #E0E0E0;
+  --th-chart-5: #4A4A4A;
+
+  --th-radius-card: 0px;
+  --th-radius-btn: 0px;
+  --th-radius-input: 0px;
+  --th-radius-nav: 0px;
+  --th-radius-pill: 0px;
+  --th-shadow-card: none;
+  --th-border-w: 1px;
+  --th-nav-border-w: 1px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   THEME: Emerald Vault — Dark forest, organic shapes, glow effects.
+   Typography: Display font (Outfit), medium rounding, subtle green glow.
+   ═══════════════════════════════════════════════════════════════ */
+[data-theme="emerald"] {
+  --th-surface-base: #0B1410;
+  --th-surface-card: #12201A;
+  --th-surface-elevated: #1A2E24;
+  --th-text-primary: #D4E8DC;
+  --th-text-muted: rgba(212, 232, 220, 0.4);
+  --th-accent: #34D399;
+  --th-accent-hover: #6EE7B7;
+  --th-border-subtle: rgba(52, 211, 153, 0.08);
+  --th-border-muted: rgba(52, 211, 153, 0.15);
+  --th-positive: #34D399;
+  --th-negative: #F87171;
+  --th-btn-bg: #34D399;
+  --th-btn-text: #0B1410;
+  --th-nav-bg: rgba(11, 20, 16, 0.92);
+  --th-input-bg: #1A2E24;
+  --th-overlay: rgba(11, 20, 16, 0.85);
+  --th-toggle-on: #34D399;
+
+  --th-chart-1: #34D399;
+  --th-chart-2: #6EE7B7;
+  --th-chart-3: #065F46;
+  --th-chart-4: #A7F3D0;
+  --th-chart-5: #064E3B;
+
+  --th-radius-card: 8px;
+  --th-radius-btn: 8px;
+  --th-radius-input: 8px;
+  --th-radius-nav: 0px;
+  --th-radius-pill: 8px;
+  --th-shadow-card: 0 0 20px rgba(52, 211, 153, 0.04), 0 0 1px rgba(52, 211, 153, 0.15);
+  --th-border-w: 1px;
+  --th-nav-border-w: 1px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   THEME: Rose Quartz — Warm dark blush, very rounded, soft/premium.
+   Typography: Serif italic, large rounding, frosted glass effects.
+   ═══════════════════════════════════════════════════════════════ */
+[data-theme="rose"] {
+  --th-surface-base: #1A1018;
+  --th-surface-card: #261A24;
+  --th-surface-elevated: #33222F;
+  --th-text-primary: #F2E0EC;
+  --th-text-muted: rgba(242, 224, 236, 0.4);
+  --th-accent: #F472B6;
+  --th-accent-hover: #F9A8D4;
+  --th-border-subtle: rgba(244, 114, 182, 0.08);
+  --th-border-muted: rgba(244, 114, 182, 0.15);
+  --th-positive: #F472B6;
+  --th-negative: rgba(242, 224, 236, 0.5);
+  --th-btn-bg: #F472B6;
+  --th-btn-text: #1A1018;
+  --th-nav-bg: rgba(26, 16, 24, 0.85);
+  --th-input-bg: #33222F;
+  --th-overlay: rgba(26, 16, 24, 0.85);
+  --th-toggle-on: #F472B6;
+
+  --th-chart-1: #F472B6;
+  --th-chart-2: #F9A8D4;
+  --th-chart-3: #BE185D;
+  --th-chart-4: #FBCFE8;
+  --th-chart-5: #9D174D;
+
+  --th-radius-card: 20px;
+  --th-radius-btn: 999px;
+  --th-radius-input: 16px;
+  --th-radius-nav: 999px;
+  --th-radius-pill: 999px;
+  --th-shadow-card: 0 4px 24px rgba(244, 114, 182, 0.06);
+  --th-border-w: 1px;
+  --th-nav-border-w: 0px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   THEME: Solar Flare — Brutalist, industrial, thick borders.
+   Typography: Monospace headers, square edges, heavy borders, raw.
+   ═══════════════════════════════════════════════════════════════ */
+[data-theme="solar"] {
+  --th-surface-base: #0F0A05;
+  --th-surface-card: #1C1408;
+  --th-surface-elevated: #2A1F0E;
+  --th-text-primary: #F5E6D0;
+  --th-text-muted: rgba(245, 230, 208, 0.4);
+  --th-accent: #F59E0B;
+  --th-accent-hover: #FBBF24;
+  --th-border-subtle: rgba(245, 158, 11, 0.15);
+  --th-border-muted: rgba(245, 158, 11, 0.25);
+  --th-positive: #F59E0B;
+  --th-negative: #FB7185;
+  --th-btn-bg: #F59E0B;
+  --th-btn-text: #0F0A05;
+  --th-nav-bg: rgba(15, 10, 5, 0.95);
+  --th-input-bg: #2A1F0E;
+  --th-overlay: rgba(15, 10, 5, 0.9);
+  --th-toggle-on: #F59E0B;
+
+  --th-chart-1: #F59E0B;
+  --th-chart-2: #FBBF24;
+  --th-chart-3: #D97706;
+  --th-chart-4: #FDE68A;
+  --th-chart-5: #92400E;
+
+  --th-radius-card: 0px;
+  --th-radius-btn: 0px;
+  --th-radius-input: 0px;
+  --th-radius-nav: 0px;
+  --th-radius-pill: 2px;
+  --th-shadow-card: none;
+  --th-border-w: 2px;
+  --th-nav-border-w: 3px;
+}
+
+/* ─── Base body ────────────────────────────────────────────── */
+body {
+  background-color: var(--th-surface-base);
+  color: var(--th-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+/* ─── Shape utility classes ────────────────────────────────── */
+.th-card { border-radius: var(--th-radius-card); }
+.th-btn { border-radius: var(--th-radius-btn); }
+.th-input { border-radius: var(--th-radius-input); }
+.th-pill { border-radius: var(--th-radius-pill); }
+.th-shadow { box-shadow: var(--th-shadow-card); }
+.th-border { border-width: var(--th-border-w); }
+.th-nav-border { border-width: var(--th-nav-border-w); }
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ─── Theme-specific nav overrides ─────────────────────────── */
+
+/* Rose Quartz nav: floating pill with frosted glass */
+[data-theme="rose"] nav.theme-nav {
+  margin: 0 12px 8px 12px;
+  width: auto;
+  left: 12px;
+  right: 12px;
+  backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* Arctic nav: floating rounded bar with soft shadow */
+[data-theme="arctic"] nav.theme-nav {
+  margin: 0 12px 8px 12px;
+  width: auto;
+  left: 12px;
+  right: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+/* Solar: top accent line on nav */
+[data-theme="solar"] nav.theme-nav {
+  border-top-color: var(--th-accent);
+}
+
+/* ─── Android-native UX ───────────────────────────────────── */
+
+/* Disable text selection on interactive elements (native app feel) */
+nav, button, a, .no-select {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Hide all scrollbars for native feel */
+::-webkit-scrollbar { display: none; }
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* No-scrollbar utility (for horizontal filters) */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Native touch ripple effect on interactive elements */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Active press state for buttons (Material-style feedback) */
+button:active:not(:disabled) {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+/* Native select/dropdown styling */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+  padding-right: 36px;
+}
+
+/* Smooth transitions on themed elements */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Prevent overscroll bounce on mobile (native feel) */
+html {
+  overscroll-behavior: none;
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  height: 100%;
+  overflow: hidden;
+}
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Status bar spacer for Capacitor */
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}

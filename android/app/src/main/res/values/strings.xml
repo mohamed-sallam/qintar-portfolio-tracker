@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">asset-portfolio-tracker</string>
+    <string name="title_activity_main">asset-portfolio-tracker</string>
+    <string name="package_name">com.sterling.portfolio</string>
+    <string name="custom_url_scheme">com.sterling.portfolio</string>
+</resources>
