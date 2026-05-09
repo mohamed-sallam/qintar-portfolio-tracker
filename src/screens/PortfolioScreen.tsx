@@ -200,7 +200,7 @@ export function PortfolioScreen() {
                   {e.assetDef?.displayName || e.assetTypeId}
                 </h3>
                 <p className="text-[9px] uppercase tracking-[0.15em] text-text-muted">
-                  {formatQuantity(e.count, e.baseType === 'GOLD' || e.baseType === 'SILVER')} {e.assetDef?.countLabel}
+                  {formatQuantity(e.count, false)} {e.assetDef?.countLabel}
                 </p>
               </div>
               <div className="text-right shrink-0">
